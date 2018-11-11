@@ -8,17 +8,23 @@ import TableRow from '@material-ui/core/TableRow';
 
 import './App.css';
 
+
+const CustomTable = withStyles(theme => ({
+  root: {
+    borderWidth: "8px",
+    borderStyle:  "solid",
+    borderColor: "#222222",
+    borderRadius: "8px",
+    borderCollapse: "separate"
+  }
+}))(Table);
+
+
 const CustomTableCell = withStyles(theme => ({
   root: {
-    background: "#282c34"
-  },
-  head: {
-    color: theme.palette.common.white,
-  },
-  body: {
-    fontSize: 14,
+    background: "#282c34",
     color: theme.palette.common.white
-  },
+  }
 }))(TableCell);
 
 class App extends Component {
@@ -59,7 +65,7 @@ class App extends Component {
             <li><a href="http://steamcommunity.com/sharedfiles/filedetails/?id=904845972">Getting started guide</a></li>
             <li><a href="https://timer00.github.io/ReviveWizardWars/Releases/mww-client-installer-2.4.0.exe">Latest Client Installer</a></li>
           </ul>
-          <Table className="server-table">
+          <CustomTable className="server-table">
             <TableHead>
               <TableRow>
                 <CustomTableCell>Name</CustomTableCell>
@@ -70,7 +76,7 @@ class App extends Component {
             <TableBody>
               {this.renderServers()}
             </TableBody>
-          </Table>
+          </CustomTable>
         </header>
       </div>
     );

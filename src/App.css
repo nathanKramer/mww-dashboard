@@ -1,5 +1,5 @@
 body {
-  background-image: url("https://vignette.wikia.nocookie.net/steamtradingcards/images/e/e8/Magicka_Wizard_Wars_Background_Wuxia_Wizard.jpg/revision/latest?cb=20131026204641&format=original");
+  background-image: url("https://images7.alphacoders.com/625/625730.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -33,6 +33,11 @@ body {
 
 .App .server-table {
   width: 60%;
+  min-width: 700px;
+}
+
+.App ul {
+  padding: 0;
 }
 
 .App li {
