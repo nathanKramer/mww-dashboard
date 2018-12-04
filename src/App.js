@@ -50,7 +50,7 @@ class App extends Component {
         <TableRow key={server.name}>
           <CustomTableCell key={`${server.name}-name`}>{server.name}</CustomTableCell>
           <CustomTableCell key={`${server.name}-players`}>{server.players}</CustomTableCell>
-          <CustomTableCell key={`${server.name}-join`}><a href={`steam://${server.server_addr}`}>join on steam...</a></CustomTableCell>
+          <CustomTableCell key={`${server.name}-join`}><a href={`steam://connect/${server.server_addr}`}>join on steam...</a></CustomTableCell>
         </TableRow>
       )
     })
